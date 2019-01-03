@@ -12,6 +12,7 @@
 		3B7F3D7121DDEA780056AE07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F3D6F21DDEA780056AE07 /* Main.storyboard */; };
 		3B7F3D7321DDEA7A0056AE07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F3D7221DDEA7A0056AE07 /* Assets.xcassets */; };
 		3B7F3D7621DDEA7A0056AE07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B7F3D7421DDEA7A0056AE07 /* LaunchScreen.storyboard */; };
+		3B7F3D8021DDEC430056AE07 /* ImageGenerating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7F3D7F21DDEC430056AE07 /* ImageGenerating.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		3B7F3D7221DDEA7A0056AE07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B7F3D7521DDEA7A0056AE07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B7F3D7721DDEA7A0056AE07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B7F3D7F21DDEC430056AE07 /* ImageGenerating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGenerating.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		3B7F3D6A21DDEA780056AE07 /* AutomaticallyGenerateUIImage */ = {
 			isa = PBXGroup;
 			children = (
+				3B7F3D7E21DDEC2D0056AE07 /* Utilities */,
 				3B7F3D6B21DDEA780056AE07 /* AppDelegate.swift */,
 				3B7F3D6D21DDEA780056AE07 /* ViewController.swift */,
 				3B7F3D6F21DDEA780056AE07 /* Main.storyboard */,
@@ -62,6 +65,14 @@
 				3B7F3D7721DDEA7A0056AE07 /* Info.plist */,
 			);
 			path = AutomaticallyGenerateUIImage;
+			sourceTree = "<group>";
+		};
+		3B7F3D7E21DDEC2D0056AE07 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3B7F3D7F21DDEC430056AE07 /* ImageGenerating.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,7 +159,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+			shellScript = "rm -f \"${SRCROOT}/AutomaticallyGenerateUIImage/Utilities/ImageGenerating.swift\"\n\"${SRCROOT}/AutomaticallyGenerateUIImage/Scripts/AutomaticImageGenerating.swift\" \"${SRCROOT}/AutomaticallyGenerateUIImage/Assets.xcassets/AutomaticallyGenerateUIImage\" \"${SRCROOT}/AutomaticallyGenerateUIImage/Utilities/ImageGenerating.swift\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -159,6 +170,7 @@
 			files = (
 				3B7F3D6E21DDEA780056AE07 /* ViewController.swift in Sources */,
 				3B7F3D6C21DDEA780056AE07 /* AppDelegate.swift in Sources */,
+				3B7F3D8021DDEC430056AE07 /* ImageGenerating.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
